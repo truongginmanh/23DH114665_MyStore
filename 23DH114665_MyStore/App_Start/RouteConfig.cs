@@ -14,10 +14,11 @@ namespace _23DH114665_MyStore
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+    "Default",
+    "{controller}/{action}/{id}",
+    new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+    new[] { "_23DH114665_MyStore.Controllers" }
+);
         }
     }
 }
