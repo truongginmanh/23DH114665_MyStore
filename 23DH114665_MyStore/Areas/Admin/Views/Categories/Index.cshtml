@@ -5,17 +5,15 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
+<h2 class="bg-success">DANH SÁCH DANH MỤC</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<table class="table alert-info col-md-6">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CategoryName)
+        <th class="bg-success col-md-4">
+            @*Html.DisplayNameFor(model => model.CategoryName)*@
+            TÊN DANH MỤC
         </th>
-        <th></th>
+        <th class="bg-success col-lg-2"></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -24,11 +22,13 @@
             @Html.DisplayFor(modelItem => item.CategoryName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CategoryID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CategoryID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CategoryID })
+            @Html.ActionLink("Sửa", "Edit", new { id = item.CategoryID }, new { @class = "btn btn-primary btn-sm" }) |
+            @Html.ActionLink("Xóa", "Delete", new { id = item.CategoryID }, new { @class = "btn btn-primary btn-sm" })
         </td>
     </tr>
 }
 
 </table>
+<p>
+    @Html.ActionLink("Thêm mới", "Create", null, new { @class = "btn btn-primary" })
+</p>

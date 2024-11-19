@@ -20,12 +20,12 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Danh mục", "Index", "Categories")</li>
-                    <li>@Html.ActionLink("Sản phẩm", "Index", "Product")</li>
-                    <li>@Html.ActionLink("Khách hàng", "Index", "Cusomers")</li>
-                    <li>@Html.ActionLink("Đơn hàng", "Index", "Others")</li>
-                    <li>@Html.ActionLink("Tài khoản", "Index", "Users")</li>
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new {@class="nav-link"})</li>
+                    <li>@Html.ActionLink("Danh mục", "Index", "Admin/Categories", new {area=""}, new {@class = "nav-link"})</li>
+                    <li>@Html.ActionLink("Sản phẩm", "Index", "Admin/Product", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Khách hàng", "Index", "Admin/Cusomers", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Đơn hàng", "Index", "Others", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Tài khoản", "Index", "Account/Register", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
             </div>
         </div>

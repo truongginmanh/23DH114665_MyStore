@@ -1,18 +1,38 @@
-﻿
+﻿@model _23DH114665_MyStore.Models.ViewModel.HomeProductVM
 @{
-    Layout = null;
+    ViewBag.Title = "Customer Home Page";
+    <link rel="stylesheet" type="text/css" href="~/Content/myStyle/CustomerHome.css" />
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-        TRANG HOME CỦA ADMIN
+@* PHẦN BANNER *@
+<section class="banner">
+    <div class="banner-container">
+        @*<h2>ShadowGarden</h2>
+        <p></p>*@
+        <a href="#" class="btnBanner">SHOWTIME</a>
     </div>
-</body>
-</html>
+</section>
+
+@* PHẦN TÌM KIẾM SẢN PHẨM *@
+<section class="container-fluid searchProd">
+    <h2>Tìm kiếm sản phẩm</h2>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+            {
+                <div class="form-group search-container">
+                    @Html.TextBoxFor(m => m.SearchTerm, new
+               {
+                   @class = "search-input",
+                   placeholder = "Nhập tên, mô tả hoặc loại sản phẩm"
+               })  
+                    <button type="submit" class="search-button">Tìm kiếm</button>
+                </div>
+            }
+</section>
+<hr />
+
+@* SẢN PHẨM NỔI BẬT *@
+@Html.Partial("_PVFeatureProduct",Model)
+
+@* SẢN PHẨM MỚI *@
+@Html.Partial("_PVNewProduct",Model)    

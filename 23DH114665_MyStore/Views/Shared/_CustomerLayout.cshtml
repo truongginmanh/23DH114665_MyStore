@@ -1,0 +1,202 @@
+﻿<style type="text/css">
+    html {
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    body {
+        padding: 2px;
+        background-color: white;
+    }
+
+    #container {
+        border: 1px solid #000000;
+        border-radius: 15px;
+        padding:0;
+    }
+
+    header {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        unicode-bidi: isolate;
+    }
+
+    .header-logo img {
+        height: 50px;
+    }
+    nav {
+        display: block;
+        unicode-bidi: isolate;
+    }
+    ul {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+        unicode-bidi: isolate;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+        nav ul li {
+            align-content: center;
+            margin: auto;
+            margin-left: 100px;
+            font-size: 1.6rem;
+        }
+
+            nav ul li a {
+                text-decoration: none;
+                color: rgb(132, 135, 136);
+                font-family:Armo;
+            }
+
+    section {
+        background-color: white;
+        min-height: 300px;
+    }
+    .footer {
+        background-color: #006f3c;
+        color: #fff;
+        padding: 24px 15px;
+    }
+    .footer-content-block {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        grid-gap: 30px;
+    }
+   .footer-content-block .item {
+            line-height: 28px;
+   }
+    .footer-content-block .item .head2 {
+        font-family: Baloo\ 2;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+  .footer-content-block .col1, .footer .footer-content-block .col2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 30px;
+  }
+ .footer-content-block .col2 {
+            padding-top: 12px;
+ }
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phúc Long Coffee & Tea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/PagedList.css" />
+    <link href="/Content/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="header-logo">
+                <img src="~/Content/image/logo.png" alt="logo" />
+            </div>
+            <nav>
+                <ul>
+                    <li><img src="~/Content/image/trangchu.png" style="max-height:25px; padding-bottom:5px;" /><a href="~/Home">Trang chủ</a></li>
+                    <li><a href="~/Home">Sản phẩm</a></li>
+                    <li><img src="~/Content/image/giohang.png" style="max-height:32px; padding-bottom:5px;" /><a href="~/Cart">Giỏ hàng</a></li>
+                    <li><img src="~/Content/image/taikhoan.png" style="max-height:20px;" /><a href="~/Account/Login">Tài khoản</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <section>
+        @RenderBody()
+    </section>
+    <footer>
+        <div id="footer" class="footer">
+           <div class="footer-content-block">
+                <div class="block1 item">
+                     <div class="head2">ĐỊA CHỈ</div>
+                         <div>
+                              <strong>Trụ sở chính:</strong> Công ty Cổ Phần Phúc Long Heritage - ĐKKD: 0316 871719 do sở KHĐT TPHCM cấp lần đầu ngày 21/05/2021
+                         </div>
+                         <div>
+                               <strong>Nhà máy:</strong> D_8D_CN Đường XE 1, Khu Công Nghiệp Mỹ Phước III, phường Mỹ Phước, thị xã Bến Cát, tỉnh Bình Dương, Việt Nam.
+                         </div>
+                         <div>
+                                <strong>Địa chỉ:</strong> Phòng 702, Tầng 7, Tòa nhà Central Plaza, số 17 Lê Duẩn, phường Bến Nghé, quận 1, Hồ Chí Minh.
+                         </div>
+                         <div>
+                                <strong>Hotline Đặt hàng:</strong> 1800 6779 
+                         </div>
+                         <div>
+                                <strong>Hotline Công ty:</strong> 1900 2345 18 (Bấm phím 0: Lễ Tân | phím 1: CSKH) 
+                         </div>
+                         <div>
+                                 <strong>Email:</strong> sales@phuclong.masangroup.com, info2@phuclong.masangroup.com
+                         </div>
+                </div>
+            <div class="block2">
+               <div class="col1">
+                <div class="item">
+                   <div class="head2">CÔNG TY
+                       </div>
+                   <div class="body"><a href="/ve-chung-toi/ve-phuc-long/gioi-thieu-cong-ty">
+                       <div>Giới thiệu công ty
+                           </div>
+                        </a>
+                       </div>
+                   <div class="body"><a href="/ve-chung-toi/ve-phuc-long/thu-vien-hinh-anh"><div>Thư viện hình ảnh</div></a>
+                       </div>
+                   <div class="body"><a href="/ve-chung-toi/ve-phuc-long/lien-he"><div>Liên hệ</div></a>
+                    </div>
+                    </div>
+                <div class="item"><div class="head2">TUYỂN DỤNG</div><div class="body"><a href="/ve-chung-toi/tuyen-dung/htch"><div>HTCH</div></a>
+                           </div>
+                   <div class="body"><a href="/ve-chung-toi/tuyen-dung/kiosk"><div>Kiosk</div></a>
+                               </div>
+                   <div class="body"><a href="/ve-chung-toi/tuyen-dung/van-phong"><div>Văn phòng</div></a>
+                                   </div>
+                   <div class="body"><a href="/ve-chung-toi/tuyen-dung/nha-may"><div>Nhà máy</div></a>
+                                       </div>
+                    </div>
+                <div class="item"><div class="head2">HỘI VIÊN</div><div class="body"><a href="/hoi-vien/faq"><div>Câu hỏi thường gặp (FAQ)</div></a>
+                                              </div>
+                   <div class="body"><a href="/hoi-vien/dieu-khoan-va-dieu-kien-chuong-trinh-hoi-vien"><div>Điều khoản và điều kiện chương trình hội viên</div></a>
+                                                  </div>
+                   <div class="body"><a href="/hoi-vien/dieu-khoan-dieu-kien-the-tra-truoc"><div>Điều khoản &amp; Điều kiện Thẻ trả trước</div></a>
+                                                      </div>
+                   </div>
+                <div class="item"><div class="head2">LIÊN HỆ</div><div class="body"><a href="/ve-chung-toi/ve-phuc-long/lien-he"><div>Liên hệ</div></a>
+                                                             </div>
+                    </div>
+                   </div>
+                <div class="col2"><div class="item"><div class="head2">KHUYẾN MÃI</div><div class="body"><a href="/khuyen-mai"><div>Tin khuyến mãi</div></a>
+                                                                     </div>
+                     </div>
+                <div class="item"><div class="head2">CỬA HÀNG</div><div class="body"><a href="/ve-chung-toi/cua-hang/danh-sach-cua-hang"><div>Danh sách cửa hàng</div></a>
+                                                                            </div>
+                    </div>
+                <div class="item"><div class="head2">ĐIỀU KHOẢN SỬ DỤNG</div><div class="body"><a href="/ve-chung-toi/dieu-khoan-su-dung/chinh-sach-bao-mat-thong-tin"><div>Chính sách bảo mật thông tin</div></a>
+                                                                                     </div>
+                    <div class="body"><a href="/ve-chung-toi/dieu-khoan-su-dung/chinh-sach-dat-hang"><div>Chính sách đặt hàng</div></a>
+                                                                                         </div>
+                                                                                </div>
+                <div class="item"><div class="logoSaleContainer"><a href="http://online.gov.vn/Home/WebDetails/96621" target="_blank" rel="noreferrer" style="display: flex; cursor: pointer;"><img src="~/Content/image/imgfooter.png" alt="Notice to Ministry of Industry and Trade" style="width: 100%; height: 100%; display: block; position: relative;"></a>
+                     </div>
+                    </div>
+                                                                 </div>
+                </div>
+               </div>
+        </div>
+    </footer>
+</body>
+</html>
